@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+   http://www.springframework.org/schema/tx 
+   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+   http://www.springframework.org/schema/context      
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.hiwater.pojo" />
+
+
+	<bean name="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.show_sql=true
+				hbm2ddl.auto=update
+			</value>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.hiwater.pojo</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/hiCopyDB?useSSL=false" />
+		<property name="username" value="root" />
+		<property name="password" value="12369874a" />
+	</bean>
+
+	<!-- Action -->
+	<bean name="userActionBean" class="com.hiwater.action.UserAction">
+		<property name="userService" ref="userServiceImpl" />
+	</bean>
+	<bean name="roleActionBean" class="com.hiwater.action.RoleAction">
+		<property name="roleService" ref="roleServiceImpl" />
+	</bean>
+	<bean name="actionActionBean" class="com.hiwater.action.ActionAction">
+		<property name="actionService" ref="actionServiceImpl" />
+	</bean>
+	<bean name="codeActionBean" class="com.hiwater.action.CodeAction">
+		<property name="codeService" ref="codeServiceImpl" />
+	</bean>
+	<bean name="belonTypeActionBean" class="com.hiwater.action.BelongTypeAction">
+		<property name="belongTypeService" ref="belongTypeServiceImpl" />
+	</bean>
+	<bean name="applicationActionBean" class="com.hiwater.action.ApplicationAction">
+		<property name="applicationService" ref="applicationServiceImpl" />
+	</bean>
+	<bean name="industryTypeActionBean" class="com.hiwater.action.IndustryTypeAction">
+		<property name="industryTypeService" ref="industryTypeServiceImpl" />
+	</bean>
+	<bean name="logActionBean" class="com.hiwater.action.LogAction">
+		<property name="logService" ref="logServiceImpl" />
+	</bean>
+	<bean name="measureunitActionBean" class="com.hiwater.action.MeasureunitAction">
+		<property name="measureunitService" ref="measureunitServiceImpl" />
+	</bean>
+	<bean name="moduleActionBean" class="com.hiwater.action.ModuleAction">
+		<property name="moduleService" ref="moduleServiceImpl" />
+	</bean>
+	<bean name="navigationActionBean" class="com.hiwater.action.NavigationAction">
+		<property name="navigationService" ref="navigationServiceImpl" />
+	</bean>
+	<bean name="navigationItemActionBean" class="com.hiwater.action.NavigationItemAction">
+		<property name="navigationItemService" ref="navigationItemServiceImpl" />
+	</bean>
+	<bean name="onlineActionBean" class="com.hiwater.action.OnlineAction">
+		<property name="onlineService" ref="onlineServiceImpl" />
+	</bean>
+	<bean name="pollutantcodeActionBean" class="com.hiwater.action.PollutantcodeAction">
+		<property name="pollutantcodeService" ref="pollutantcodeServiceImpl" />
+	</bean>
+	<bean name="pollutanttypeActionBean" class="com.hiwater.action.PollutanttypeAction">
+		<property name="pollutanttypeService" ref="pollutanttypeServiceImpl" />
+	</bean>
+	<bean name="portalActionBean" class="com.hiwater.action.PortalAction">
+		<property name="portalService" ref="portalServiceImpl" />
+	</bean>
+	<bean name="portalColumnWidthActionBean" class="com.hiwater.action.PortalColumnWidthAction">
+		<property name="portalColumnWidthService" ref="portalColumnWidthServiceImpl" />
+	</bean>
+	<bean name="portalItemActionBean" class="com.hiwater.action.PortalItemAction">
+		<property name="portalItemService" ref="portalItemServiceImpl" />
+	</bean>
+	<bean name="psgroupviewActionBean" class="com.hiwater.action.PsgroupviewAction">
+		<property name="psgroupviewService" ref="psgroupviewServiceImpl" />
+	</bean>
+	<bean name="regionActionBean" class="com.hiwater.action.RegionAction">
+		<property name="regionService" ref="regionServiceImpl" />
+	</bean>
+	<bean name="scheduleTaskActionBean" class="com.hiwater.action.ScheduleTaskAction">
+		<property name="scheduleTaskService" ref="scheduleTaskServiceImpl" />
+	</bean>
+	<bean name="valleyActionBean" class="com.hiwater.action.ValleyAction">
+		<property name="valleyService" ref="valleyServiceImpl" />
+	</bean>
+	<bean name="waterareatypeActionBean" class="com.hiwater.action.WaterareatypeAction">
+		<property name="waterareatypeService" ref="waterareatypeServiceImpl" />
+	</bean>
+	<bean name="loginActionBean" class="com.hiwater.action.LoginAction">
+		<property name="userService" ref="userServiceImpl" />
+	</bean>
+	
+	<bean name="gethelpActionBean" class="com.hiwater.action.GetHelpAction">
+	</bean>
+
+
+	<!-- Service -->
+	<bean name="userServiceImpl" class="com.hiwater.service.impl.UserServiceImpl">
+		<property name="userDAO" ref="userDAOImpl" />
+	</bean>
+	<bean name="roleServiceImpl" class="com.hiwater.service.impl.RoleServiceImpl">
+		<property name="roleDAO" ref="roleDAOImpl" />
+	</bean>
+	<bean name="actionServiceImpl" class="com.hiwater.service.impl.ActionServiceImpl">
+		<property name="actionDAO" ref="actionDAOImpl" />
+	</bean>
+	<bean name="codeServiceImpl" class="com.hiwater.service.impl.CodeServiceImpl">
+		<property name="codeDAO" ref="codeDAOImpl" />
+	</bean>
+	<bean name="belongTypeServiceImpl" class="com.hiwater.service.impl.BelongTypeServiceImpl">
+		<property name="belongTypeDAO" ref="belongTypeDAOImpl" />
+	</bean>
+	<bean name="applicationServiceImpl" class="com.hiwater.service.impl.ApplicationServiceImpl">
+		<property name="applicationDAO" ref="applicationDAOImpl" />
+	</bean>
+	<bean name="industryTypeServiceImpl" class="com.hiwater.service.impl.IndustryTypeServiceImpl">
+		<property name="industryTypeDAO" ref="industryTypeDAOImpl" />
+	</bean>
+	<bean name="logServiceImpl" class="com.hiwater.service.impl.LogServiceImpl">
+		<property name="logDAO" ref="logDAOImpl" />
+	</bean>
+	<bean name="measureunitServiceImpl" class="com.hiwater.service.impl.MeasureunitServiceImpl">
+		<property name="measureunitDAO" ref="measureunitDAOImpl" />
+	</bean>
+	<bean name="moduleServiceImpl" class="com.hiwater.service.impl.ModuleServiceImpl">
+		<property name="moduleDAO" ref="moduleDAOImpl" />
+	</bean>
+	<bean name="navigationServiceImpl" class="com.hiwater.service.impl.NavigationServiceImpl">
+		<property name="navigationDAO" ref="navigationDAOImpl" />
+	</bean>
+	<bean name="navigationItemServiceImpl" class="com.hiwater.service.impl.NavigationItemServiceImpl">
+		<property name="navigationItemDAO" ref="navigationItemDAOImpl" />
+	</bean>
+	<bean name="onlineServiceImpl" class="com.hiwater.service.impl.OnlineServiceImpl">
+		<property name="onlineDAO" ref="onlineDAOImpl" />
+	</bean>
+	<bean name="pollutantcodeServiceImpl" class="com.hiwater.service.impl.PollutantcodeServiceImpl">
+		<property name="pollutantcodeDAO" ref="pollutantcodeDAOImpl" />
+	</bean>
+	<bean name="pollutanttypeServiceImpl" class="com.hiwater.service.impl.PollutanttypeServiceImpl">
+		<property name="pollutanttypeDAO" ref="pollutanttypeDAOImpl" />
+	</bean>
+	<bean name="portalServiceImpl" class="com.hiwater.service.impl.PortalServiceImpl">
+		<property name="portalDAO" ref="portalDAOImpl" />
+	</bean>
+	<bean name="portalColumnWidthServiceImpl" class="com.hiwater.service.impl.PortalColumnWidthServiceImpl">
+		<property name="portalColumnWidthDAO" ref="portalColumnWidthDAOImpl" />
+	</bean>
+	<bean name="portalItemServiceImpl" class="com.hiwater.service.impl.PortalItemServiceImpl">
+		<property name="portalItemDAO" ref="portalItemDAOImpl" />
+	</bean>
+	<bean name="psgroupviewServiceImpl" class="com.hiwater.service.impl.PsgroupviewServiceImpl">
+		<property name="psgroupviewDAO" ref="psgroupviewDAOImpl" />
+	</bean>
+	<bean name="regionServiceImpl" class="com.hiwater.service.impl.RegionServiceImpl">
+		<property name="regionDAO" ref="regionDAOImpl" />
+	</bean>
+	<bean name="scheduleTaskServiceImpl" class="com.hiwater.service.impl.ScheduleTaskServiceImpl">
+		<property name="scheduleTaskDAO" ref="scheduleTaskDAOImpl" />
+	</bean>
+	<bean name="valleyServiceImpl" class="com.hiwater.service.impl.ValleyServiceImpl">
+		<property name="valleyDAO" ref="valleyDAOImpl" />
+	</bean>
+	<bean name="waterareatypeServiceImpl" class="com.hiwater.service.impl.WaterareatypeServiceImpl">
+		<property name="waterareatypeDAO" ref="waterareatypeDAOImpl" />
+	</bean>
+
+
+	<!--Dao -->
+	<bean name="userDAOImpl" class="com.hiwater.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="roleDAOImpl" class="com.hiwater.dao.impl.RoleDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="actionDAOImpl" class="com.hiwater.dao.impl.ActionDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="codeDAOImpl" class="com.hiwater.dao.impl.CodeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="belongTypeDAOImpl" class="com.hiwater.dao.impl.BelongTypeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="applicationDAOImpl" class="com.hiwater.dao.impl.ApplicationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="industryTypeDAOImpl" class="com.hiwater.dao.impl.IndustryTypeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="logDAOImpl" class="com.hiwater.dao.impl.LogDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="measureunitDAOImpl" class="com.hiwater.dao.impl.MeasureunitDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="moduleDAOImpl" class="com.hiwater.dao.impl.ModuleDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="navigationDAOImpl" class="com.hiwater.dao.impl.NavigationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="navigationItemDAOImpl" class="com.hiwater.dao.impl.NavigationItemDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="onlineDAOImpl" class="com.hiwater.dao.impl.OnlineDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="pollutantcodeDAOImpl" class="com.hiwater.dao.impl.PollutantcodeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="pollutanttypeDAOImpl" class="com.hiwater.dao.impl.PollutanttypeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="portalDAOImpl" class="com.hiwater.dao.impl.PortalDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="portalColumnWidthDAOImpl" class="com.hiwater.dao.impl.PortalColumnWidthDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="portalItemDAOImpl" class="com.hiwater.dao.impl.PortalItemDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="psgroupviewDAOImpl" class="com.hiwater.dao.impl.PsgroupviewDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="regionDAOImpl" class="com.hiwater.dao.impl.RegionDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="scheduleTaskDAOImpl" class="com.hiwater.dao.impl.ScheduleTaskDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="valleyDAOImpl" class="com.hiwater.dao.impl.ValleyDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean name="waterareatypeDAOImpl" class="com.hiwater.dao.impl.WaterareatypeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+
+	<bean name="testActionBean" class="com.hiwater.action.TestAction">
+
+	</bean>
+</beans>

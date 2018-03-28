@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="default" extends="json-default">
+
+		<action name="login" class="testActionBean">
+			<result name="success">index.jsp</result>
+		</action>
+
+		<action name="userlist" class="userActionBean" method="getUserList">
+			<result name="LISTJSP">list.jsp</result>
+		</action>
+
+		<action name="rolelist" class="roleActionBean" method="getRoleList">
+			<result name="LISTJSP">role.jsp</result>
+		</action>
+
+		<action name="actionlist" class="actionActionBean" method="getActionList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="codelist" class="codeActionBean" method="getCodeList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="belongtypelist" class="belonTypeActionBean"
+			method="getBelongTypeList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="applicationlist" class="applicationActionBean"
+			method="getApplicationList">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+		<action name="industrytypelist" class="industryTypeActionBean"
+			method="getIndustryTypeList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="loglist" class="logActionBean" method="getLogList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="measureunitlist" class="measureunitActionBean"
+			method="getMeasureunitList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="modulelist" class="moduleActionBean" method="getModuleList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="navigationlist" class="navigationActionBean"
+			method="getNavigationList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="navigationitemlist" class="navigationItemActionBean"
+			method="getNavigationItemList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="onlinelist" class="onlineActionBean" method="getOnlineList">
+			<result name="LISTJSP" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+		<action name="pollutantcodelist" class="pollutantcodeActionBean"
+			method="getPollutantcodeList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="pollutanttypelist" class="pollutanttypeActionBean"
+			method="getPollutanttypeList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="portallist" class="portalActionBean" method="getPortalList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="portalcolumnwidthlist" class="portalColumnWidthActionBean"
+			method="getPortalColumnWidthList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="portalitemlist" class="portalItemActionBean"
+			method="getPortalItemList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="psgroupviewlist" class="psgroupviewActionBean"
+			method="getPsgroupviewList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="regionlist" class="regionActionBean" method="getRegionList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="scheduletasklist" class="scheduleTaskActionBean"
+			method="getScheduleTaskList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="valleylist" class="valleyActionBean" method="getValleyList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="waterareatypelist" class="waterareatypeActionBean"
+			method="getWaterareatypeList">
+			<result name="LISTJSP">index.jsp</result>
+		</action>
+
+		<action name="login" class="loginActionBean" method="login">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+			<result name="failure" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action name="Get" class="gethelpActionBean" method="getHelp">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+	</package>
+
+	<package name="default" extends="json-default" namespace="/Help">
+		<action name="Get" class="gethelpActionBean" method="getHelp">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="default" extends="json-default" namespace="/Portal">
+		<action name="Get" class="gethelpActionBean" method="GetPortalByUserId">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+	</package>
+
+</struts>

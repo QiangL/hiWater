@@ -1,0 +1,618 @@
+﻿.x-color-picker
+{
+    width: 208px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.x-btn-default-small .x-btn-inner, .x-btn-default-medium .x-btn-inner, .x-btn-default-large .x-btn-inner, .x-btn-default-toolbar-small .x-btn-inner, .x-btn-default-toolbar-medium .x-btn-inner, .x-btn-default-toolbar-large .x-btn-inner, .x-menu-item-text, .x-html-editor-tb .x-font-select, .x-panel-header-default, .x-panel-header-text-default, .x-panel-header-default-framed, .x-tip-header, .x-tip-body, .x-form-invalid-tip-body, .x-tip-header-text, .x-progress-text, .x-toolbar, .x-toolbar .x-form-item-label, .x-toolbar .x-toolbar-text, .x-window-header-text-default, .x-tab-bar, .x-tab button, .x-grid-rowbody, .x-grid-row .x-grid-cell, .x-grid-group-title, .x-grid-row-editor .x-form-field, .x-grid-row-editor .x-form-display-field, .x-form-invalid-under, .x-fieldset-header, .x-column-header, .x-mask-msg div, .x-btn-group-header-text-default-framed, table.x-datepicker-inner a, .x-monthpicker-item, .x-dd-drag-ghost
+{
+    font-size: 13px;
+}
+.x-form-display-field
+{
+    padding-top: 0px;
+}
+.x-action-col-icon
+{
+    cursor: pointer;
+}
+.x-tab-center
+{
+    height: 17px !important;
+}
+.x-tab-inner
+{
+    height: 17px !important;
+}
+.x-action-col-icon
+{
+    vertical-align: middle;
+}
+.accept
+{
+    background-image: url(../images/icons/accept.png) !important;
+}
+.add
+{
+    background-image: url(../images/icons/add.png) !important;
+}
+.application
+{
+    background-image: url(../images/icons/application.png) !important;
+}
+.application_add
+{
+    background-image: url(../images/icons/application_add.png) !important;
+}
+.application_cascade
+{
+    background-image: url(../images/icons/application_cascade.png) !important;
+}
+.application_delete
+{
+    background-image: url(../images/icons/application_delete.png) !important;
+}
+.disk
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/disk.png) !important;
+}
+.application_double
+{
+    background-image: url(../images/icons/application_double.png) !important;
+}
+.attach
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/attach.png) !important;
+}
+.book_open
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/book_open.png) !important;
+}
+.application_edit
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/application_edit.png) !important;
+}
+.application_error
+{
+    background-image: url(../images/icons/application_error.png) !important;
+}
+.cancel
+{
+    background-image: url(../images/icons/cancel.png) !important;
+}
+.delete
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/delete.png) !important;
+}
+.arrow_refresh
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/arrow_refresh.png) !important;
+}
+.find
+{
+    background-image: url(../images/icons/find.png) !important;
+}
+.lightning
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/lightning.png) !important;
+}
+.reload
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/reload.png) !important;
+}
+.application_form_delete
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/application_form_delete.png) !important;
+}
+.link_break
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/link_break.png) !important;
+}
+.group
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/group.png) !important;
+}
+.clock_start
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/clock_start.png) !important;
+}
+.clock_stop
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/clock_stop.png) !important;
+}
+.group_key
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/group_key.png) !important;
+}
+
+.arrow_down
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/arrow_down.png) !important;
+}
+.image_add
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/image_add.png) !important;
+}
+.arrow_up
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/arrow_up.png) !important;
+}
+.folder_add
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/folder_add.png) !important;
+}
+.folder_delete
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/folder_delete.png) !important;
+}
+.folder_up
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/folder_up.png) !important;
+}
+
+.divButtomAll
+{
+    background-image: url('../images/index/buttom.gif');
+    height: 24px;
+    background-repeat: repeat-x;
+}
+.divCenterTop
+{
+    width: 100%;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+}
+
+.divCenterDown
+{
+    background-image: url('../images/index/up.png');
+    display: inline-block;
+    width: 145px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.divCenterUp
+{
+    background-image: url('../images/index/down.png');
+    display: inline-block;
+    width: 145px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.divButtom
+{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.divLeft
+{
+    height: 42px;
+    width: 580px;
+    float: left;
+    background-repeat: no-repeat;
+    background-image: url('../images/index/logoback.gif');
+}
+
+.divCenter
+{
+    background-image: url('../images/index/reptback.gif');
+    height: 42px;
+    background-repeat: repeat-x;
+}
+
+
+.divButtom
+{
+    background-image: url('../images/index/LineRept.png');
+    height: 4px;
+    background-repeat: repeat-x;
+}
+
+.divRight
+{
+    background-image: url('../images/index/right.gif');
+    background-position: right;
+    height: 42px;
+    float: right;
+    background-repeat: no-repeat;
+}
+.divHeadRight
+{
+    float: right;
+    width: 510px;
+    background-image: url('../images/index/topright.gif');
+    height: 42px;
+}
+.divHeader
+{
+    height: 42px;
+}
+
+.UserName
+{
+    float: right;
+    padding-top: 14px;
+    color: #fff; /*padding-right: 250px;*/
+}
+.reflash
+{
+    background-image: url('../images/index/Reflash.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.home
+{
+    background-image: url('../images/index/Home.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.sz
+{
+    background-image: url('../images/index/SZ.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.help
+{
+    background-image: url('../images/index/Help.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.exit
+{
+    background-image: url('../images/index/Exit.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.Lightblue
+{
+    background-image: url('../images/index/Lightblue.png');
+    height: 16px;
+    width: 26px;
+    margin-top: 2px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.Deepcolor
+{
+    background-image: url('../images/index/Deepcolor.png');
+    height: 16px;
+    width: 26px;
+    margin-top: 2px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.Silvergray
+{
+    background-image: url('../images/index/Silvergray.png');
+    height: 16px;
+    width: 26px;
+    margin-top: 2px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.reflashFocus
+{
+    background-image: url('../images/index/ReflashFocus.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.homeFocus
+{
+    background-image: url('../images/index/HomeFocus.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.szFocus
+{
+    background-image: url('../images/index/SZFocus.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.helpFocus
+{
+    background-image: url('../images/index/HelpFocus.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.exitFocus
+{
+    background-image: url('../images/index/ExitFocus.png');
+    height: 24px;
+    width: 55px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+/*start grid 允许文本选择 start */
+.x-grid-cell, .x-grid-row, .x-selectable, .x-selectable *
+{
+    -moz-user-select: -moz-all !important;
+    -khtml-user-select: text !important;
+    -webkit-user-select: text !important;
+}
+/*end grid 允许文本选择 end*/
+
+
+/*start 首页元素的样式控制 start*/
+.x-panel-ghost
+{
+    z-index: 1;
+}
+.x-portal .x-portal-column
+{
+    /* columns must have vertical padding to avoid losing dimensions when empty */
+    padding: 8px 8px 0 0;
+}
+.x-portal .x-panel-dd-spacer
+{
+    border: 2px dashed #99bbe8;
+    background: #f6f6f6;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin-bottom: 10px;
+}
+.x-portlet
+{
+    margin-bottom: 10px;
+    padding: 1px;
+}
+.x-portlet .x-panel-body
+{
+    background: #fff;
+}
+.portlet-content
+{
+    padding: 10px;
+    font-size: 11px;
+}
+/*end 首页元素的样式控制 end*/
+
+/*设置导航树的背景*/
+.treeViewCell-nobackgroundcolor
+{
+    background: url(../images/index/left.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-color: White !important;
+}
+.arrow_up1
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/arrow_up1.png) !important;
+}
+.arrow_down1
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/arrow_down1.png) !important;
+}
+.calendar_select_day
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar_select_day.png) !important;
+}
+
+.calendar_select_week
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar_select_week.png) !important;
+}
+
+.calendar
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar.png) !important;
+}
+
+.calendar_view_month
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar_view_month.png) !important;
+}
+
+.bullet_tick
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/bullet_tick.png) !important;
+}
+
+.bullet_cross
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/bullet_cross.png) !important;
+}
+
+.calendar_add
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar_add.png) !important;
+}
+
+
+.calendar_delete
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar_delete.png) !important;
+}
+.calendar_edit
+{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/calendar_edit.png) !important;
+}
+.divCenter a{
+    color: #fff;
+}
+.divCenter a:link
+{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.divCenter a:hover
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+.divCenter a:active
+{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+/*Tab头部字体位置设置*/
+.x-tab-inner
+{
+    vertical-align: middle;
+    margin-top: 1px;
+}
+.divButtomAll
+{
+    /*background-image: url('../images/index/buttom.gif');*/
+    height: 22px; /*background-repeat: repeat-x;*/
+    border-width: 0px;
+    border-style: none;
+    background-color: #7eb7da;
+}
+
+.x-portal-body-noborder
+{
+    border-style: none !important;
+}
