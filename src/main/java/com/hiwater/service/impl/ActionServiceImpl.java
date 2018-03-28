@@ -5,7 +5,9 @@ import java.util.List;
 import com.hiwater.dao.ActionDAO;
 import com.hiwater.pojo.Action;
 import com.hiwater.service.ActionService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ActionServiceImpl implements ActionService {
 	ActionDAO actionDAO;
 	

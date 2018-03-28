@@ -6,16 +6,16 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import com.hiwater.dao.PortalColumnWidthDAO;
 import com.hiwater.pojo.PortalColumnWidth;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class PortalColumnWidthDAOImpl  extends HibernateTemplate implements PortalColumnWidthDAO {
 
-	@Override
 	public List<PortalColumnWidth> getPortalColumnWidthList() {
 		// TODO Auto-generated method stub
 		return (List<PortalColumnWidth>) find("from PortalColumnWidth");
 	}
 
-	@Override
 	public void add(PortalColumnWidth p) {
 		// TODO Auto-generated method stub
 		save(p);

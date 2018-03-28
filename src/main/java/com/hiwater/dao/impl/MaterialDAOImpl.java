@@ -6,16 +6,16 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import com.hiwater.dao.MaterialDAO;
 import com.hiwater.pojo.Material;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class MaterialDAOImpl  extends HibernateTemplate  implements MaterialDAO {
 
-	@Override
 	public List<Material> getMaterialList() {
 		// TODO Auto-generated method stub
 		return (List<Material>) find("from Material");
 	}
 
-	@Override
 	public void add(Material m) {
 		// TODO Auto-generated method stub
 		save(m);

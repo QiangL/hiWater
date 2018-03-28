@@ -39,7 +39,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/hiCopyDB?useSSL=false" />
 		<property name="username" value="root" />
-		<property name="password" value="12369874a" />
+		<property name="password" value="root" />
 	</bean>
 
 	<!-- Action -->

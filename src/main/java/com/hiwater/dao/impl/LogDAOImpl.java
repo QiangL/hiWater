@@ -6,16 +6,16 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import com.hiwater.dao.LogDAO;
 import com.hiwater.pojo.Log;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class LogDAOImpl extends HibernateTemplate implements LogDAO {
 
-	@Override
 	public void add(Log l) {
 		// TODO Auto-generated method stub
 		save(l);
 	}
 
-	@Override
 	public List<Log> getLogList() {
 		// TODO Auto-generated method stub
 		return (List<Log>) find("from Log");
