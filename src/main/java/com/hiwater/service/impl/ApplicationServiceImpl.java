@@ -18,14 +18,11 @@ public class ApplicationServiceImpl implements ApplicationService {
 		this.applicationDAO = applicationDAO;
 	}
 
-	@Override
 	public void addApplication(Application a) {
 		// TODO Auto-generated method stub
 		applicationDAO.add(a);
 
 	}
-
-	@Override
 	public List<Application> getApplicationList() {
 		// TODO Auto-generated method stub
 		return applicationDAO.getApplicationList();

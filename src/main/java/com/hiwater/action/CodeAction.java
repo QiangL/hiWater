@@ -13,7 +13,7 @@ public class CodeAction {
 		return codeService;
 	}
 
-	public void setcodeService(CodeService codeService) {
+	public void setCodeService(CodeService codeService) {
 		this.codeService = codeService;
 	}
 

@@ -9,9 +9,10 @@
 
 	<package name="default" extends="json-default">
 
-		<action name="login" class="testActionBean">
+        <!--和后面重复 -->
+		<!--<action name="login" class="testActionBean">
 			<result name="success">index.jsp</result>
-		</action>
+		</action>-->
 
 		<action name="userlist" class="userActionBean" method="getUserList">
 			<result name="LISTJSP">list.jsp</result>
@@ -137,8 +138,8 @@
 		</action>
 
 	</package>
-
-	<package name="default" extends="json-default" namespace="/Help">
+    <!--和后面重复 -->
+	<!--<package name="default" extends="json-default" namespace="/Help">
 		<action name="Get" class="gethelpActionBean" method="getHelp">
 			<result name="success" type="json">
 				<param name="root">dataMap</param>
@@ -153,6 +154,6 @@
 			</result>
 		</action>
 
-	</package>
+	</package>-->
 
 </struts>

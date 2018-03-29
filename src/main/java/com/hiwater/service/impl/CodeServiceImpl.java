@@ -18,14 +18,12 @@ public class CodeServiceImpl implements CodeService {
 		this.codeDAO = codeDAO;
 	}
 
-	@Override
 	public void addCode(Code c) {
 		// TODO Auto-generated method stub
 		codeDAO.add(c);
 		
 	}
 
-	@Override
 	public List<Code> getCodeList() {
 		// TODO Auto-generated method stub
 		List<Code> codes=codeDAO.getCodeList();

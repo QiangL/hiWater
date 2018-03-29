@@ -7,19 +7,18 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import com.hiwater.dao.ActionDAO;
 import com.hiwater.pojo.Action;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
+@Transactional
 public class ActionDAOImpl extends HibernateTemplate implements ActionDAO {
 
 	public List<Action> getActionList() {
-		// TODO Auto-generated method stub
 		return (List<Action>) find("from Action");
 	}
 
 	public void add(Action a) {
-		// TODO Auto-generated method stub
 		save(a);
-
 	}
 
 }

@@ -18,13 +18,11 @@ public class PsgroupviewServiceImpl implements PsgroupviewService {
 		this.psgroupviewDAO = psgroupviewDAO;
 	}
 
-	@Override
 	public void addPsgroupview(Psgroupview p) {
 		// TODO Auto-generated method stub
 		psgroupviewDAO.add(p);
 	}
 
-	@Override
 	public List<Psgroupview> getPsgroupviewList() {
 		// TODO Auto-generated method stub
 		return psgroupviewDAO.getPsgroupviewList();

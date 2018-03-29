@@ -5,10 +5,14 @@ import java.util.List;
 import com.hiwater.dao.ActionDAO;
 import com.hiwater.pojo.Action;
 import com.hiwater.service.ActionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ActionServiceImpl implements ActionService {
+	@Autowired
 	ActionDAO actionDAO;
 	
 
@@ -19,15 +23,11 @@ public class ActionServiceImpl implements ActionService {
 	public void setActionDAO(ActionDAO actionDAO) {
 		this.actionDAO = actionDAO;
 	}
-
-	@Override
 	public void addAction(Action a) {
 		// TODO Auto-generated method stub
 		actionDAO.add(a);
 
 	}
-
-	@Override
 	public List<Action> getActionList() {
 		// TODO Auto-generated method stub
 		List<Action> actions=actionDAO.getActionList();
